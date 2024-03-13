@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gabriel</groupId>
-	<artifactId>email-microservice</artifactId>
+	<artifactId>emailDTO-microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>email-microservice</name>
+	<name>emailDTO-microservice</name>
 	<description>Microserviço para envio de e-mails</description>
 	<properties>
 		<java.version>21</java.version>
