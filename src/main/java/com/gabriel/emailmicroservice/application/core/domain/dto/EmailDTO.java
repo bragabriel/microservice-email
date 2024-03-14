@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class EmailDTO {
-    private String to;
-    private String subject;
-    private String body;
+    private String fromPersonName;
+    private String toPersonName;
+    private String toEmail;
 }

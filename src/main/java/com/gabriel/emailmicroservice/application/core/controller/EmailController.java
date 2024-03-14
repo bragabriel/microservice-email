@@ -18,9 +18,15 @@ public class EmailController {
         this.emailServiceImpl = emailServiceImpl;
     }
 
-    @PostMapping()
-    public ResponseEntity<String> sendEmail(@RequestBody EmailDTO email) {
-        emailServiceImpl.sendEmail(email);
+    @PostMapping("/giftSent")
+    public ResponseEntity<String> giftSentEmail(@RequestBody EmailDTO email) {
+        emailServiceImpl.giftSentEmail(email);
+        return ResponseEntity.status(HttpStatus.OK).body("E-mail enviado com sucesso!");
+    }
+
+    @PostMapping("/giftReceived")
+    public ResponseEntity<String> giftReceivedEmail(@RequestBody EmailDTO email) {
+        emailServiceImpl.giftReceivedEmail(email);
         return ResponseEntity.status(HttpStatus.OK).body("E-mail enviado com sucesso!");
     }
 }
