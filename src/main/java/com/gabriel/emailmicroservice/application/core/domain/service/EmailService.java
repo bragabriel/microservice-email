@@ -2,6 +2,7 @@ package com.gabriel.emailmicroservice.application.core.domain.service;
 
 import com.gabriel.emailmicroservice.application.core.domain.dto.EmailDTO;
 import com.gabriel.emailmicroservice.application.ports.out.EmailPort;
+import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -10,13 +11,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Service
-public class EmailServiceImpl implements EmailPort {
+@RequiredArgsConstructor
+public class EmailService implements EmailPort {
 
     private final JavaMailSender javaMailSender;
-
-    public EmailServiceImpl(JavaMailSender javaMailSender) {
-        this.javaMailSender = javaMailSender;
-    }
 
     @Override
     public void giftSentEmail(EmailDTO emailDTO) {
