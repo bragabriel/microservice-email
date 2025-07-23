@@ -1,30 +1,28 @@
 # 📧 E-mail Microservice - SendGift
-Este microserviço é responsável pelo envio de e-mails relacionados à funcionalidade principal da aplicação SendGift, permitindo notificações automáticas para os usuários que enviam ou recebem presentes. Faz parte de um [projeto pessoal de estudos](https://github.com/bragabriel/project-sendgift) para aplicar conceitos e ferramentas de nível intermediário-avançado no desenvolvimento de APIs e microserviços.
+This microservice is responsible for sending email notifications related to the core functionality of the SendGift application, enabling automatic communication for users who send or receive gifts. It's part of a personal [study project](https://github.com/bragabriel/project-sendgift) focused on applying intermediate-to-advanced concepts and tools in API and microservices development.
 
-## ✨ Funcionalidade
-Quando um usuário envia um presente, ele recebe um e-mail de confirmação informando que o presente foi enviado com sucesso ao destinatário.
+## ✨ Functionality
+When a user sends a gift, they receive a confirmation email stating that the gift was successfully delivered to the recipient.
+When a user receives a gift, they get an email notification including the sending date and the sender's name.
 
-Quando um usuário recebe um presente, ele recebe um e-mail notificando que foi presenteado, com a data do envio e o nome do remetente.
+## 🧩 Architecture
+This service follows the Hexagonal Architecture (Ports & Adapters) principles, promoting a clear separation between business logic and infrastructure (e.g., the email provider). This separation improves testing, maintainability, and scalability.
 
-## 🧩 Arquitetura
-Este serviço segue os princípios da Arquitetura Hexagonal (Ports & Adapters), promovendo uma separação clara entre as regras de negócio e a infraestrutura (como o provedor de e-mail). Isso facilita testes, manutenção e evolução.
+Additional tools and approaches used:
 
-Além disso, foram utilizados:
+- OpenFeign for inter-service communication.
+- Amazon Simple Email Service (AWS SES) for reliable email delivery.
 
-OpenFeign para comunicação entre os serviços.
-
-Amazon Simple Email Service (AWS SES) como solução de envio de e-mails.
-
-## ⚙️ Tecnologias e Ferramentas
+## ⚙️ Technologies & Tools
 - Java 21
 - Spring Boot 3.2
 - Spring Cloud / OpenFeign
-- Arquitetura Hexagonal
+- Hexagonal Architecture
 - AWS SES (Simple Email Service)
-- Testes com JUnit e Mockito
+- Unit testing with JUnit and Mockito
 
-## 📬 Integrações
-Este microserviço é consumido pela aplicação principal SendGift, que aciona o envio de e-mails ao detectar eventos de envio ou recebimento de presentes.
+## 📬 Integrations
+This microservice is consumed by the main SendGift application, which triggers the email sending logic upon gift-related events.
 
-## Testes
-Cobertura com JUnit e Mockito. Mock de chamadas externas (AWS SES e Feign).
+## 🧪 Testing
+Unit tests with JUnit and Mockito, including mocks for external calls (AWS SES and Feign).
