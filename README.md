@@ -1,5 +1,5 @@
 # 📧 E-mail Microservice - SendGift
-Este microserviço é responsável pelo envio de e-mails transacionais relacionados à funcionalidade principal da aplicação SendGift, permitindo notificações automáticas para os usuários que enviam ou recebem presentes.
+Este microserviço é responsável pelo envio de e-mails relacionados à funcionalidade principal da aplicação SendGift, permitindo notificações automáticas para os usuários que enviam ou recebem presentes. Faz parte de um [projeto pessoal de estudos](https://github.com/bragabriel/project-sendgift) para aplicar conceitos e ferramentas de nível intermediário-avançado no desenvolvimento de APIs e microserviços.
 
 ## ✨ Funcionalidade
 Quando um usuário envia um presente, ele recebe um e-mail de confirmação informando que o presente foi enviado com sucesso ao destinatário.
